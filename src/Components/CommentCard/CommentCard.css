@@ -1,0 +1,44 @@
+#comment-card {
+    display: flex;
+    column-gap: 15px;
+    margin-bottom: 25px;
+}
+
+#comment-card img {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+}
+
+#comment-card #user {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#comment-card #comment {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+#comment-card #buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+#buttons .btns {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    font-size: 0.8em;
+    color: gray;
+    font-weight: 500;
+}
+
+#buttons .btns .bx {
+    color: gray;
+    font-size: 1.5em;
+}

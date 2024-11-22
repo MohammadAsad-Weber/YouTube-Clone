@@ -1,0 +1,87 @@
+#sidebar {
+    max-height: calc(100vh - 60px);
+    width: 240px;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    position: fixed;
+    top: 60px;
+    left: 0;
+
+    background: #fff;
+
+    &:hover {
+        scrollbar-width: thin;
+    }
+}
+
+#sidebar a {
+    color: #000;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+#sidebar>div {
+    padding: 15px 10px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+#sidebar #category,
+#sidebar #more-apps,
+#sidebar #setting {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar #category {
+    padding-top: 0;
+}
+
+#category a,
+#more-apps a,
+#setting a {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    &:hover,
+    &:active, 
+    &:focus {
+        background-color: rgb(235, 235, 235);
+    }
+}
+
+#category a .fa-solid,
+#more-apps a .fa-solid,
+#setting a .bx {
+    font-size: 1.35em;
+}
+
+#sidebar #docs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+#docs a {
+    color: #606060;
+    font-weight: 600;
+    padding: 0 15px;
+
+    &:hover {
+        color: #444;
+        text-decoration: underline;
+    }
+}
+
+#docs p {
+    color: #858585;
+    font-size: 0.8em;
+    font-weight: 500;
+}

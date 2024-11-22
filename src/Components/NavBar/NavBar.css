@@ -1,0 +1,142 @@
+#navbar {
+    height: 60px;
+    width: 100%;
+    min-width: 320px;
+    padding: 0 16px;
+
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+}
+
+/* LEFT SIDE */
+#navbar #menu {
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+#menu #yt-icon {
+    padding: 10px;
+    margin-left: 8px;
+}
+
+#menu .fa-bars {
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* CENTER */
+#navbar #input-area {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 0 0 40px;
+    padding: 1 4px;
+
+    position: relative;
+}
+
+#input-area #textarea {
+    width: 100%;
+    height: 40px;
+
+    font-size: 1em;
+    padding: 0 4px 0 16px;
+    margin-left: 32px;
+
+    background-color: white;
+    outline: none;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 40px 0 0 40px;
+    box-shadow: inset 0 1px 2px #eee;
+}
+
+#input-area #search {
+    height: 40px;
+    width: 64px;
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+
+    background-color: #f8f8f8;
+    border: 1px solid #d3d3d3;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+}
+
+#search .fa-magnifying-glass {
+    color: #0f0f0f;
+    scale: 1.35;
+}
+
+/* RIGHT SIDE */
+#navbar #my-Account {
+    min-width: 225px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#my-Account button {
+    margin-right: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+#my-Account button:first-child {
+    display: none;
+}
+
+#my-Account button .bx {
+    font-size: 1.75em;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1250px) {
+
+    #menu .fa-bars {
+        display: none;
+    }
+}
+
+@media (max-width: 730px) {
+
+    #navbar {
+        padding: 0 8px;
+    }
+
+    #menu #yt-icon {
+        margin-left: 0;
+    }
+
+    #navbar #input-area {
+        display: none;
+    }
+
+    #navbar #my-Account {
+        min-width: 150px;
+    }
+
+    #my-Account button:first-child {
+        display: block;
+
+        & .fa-magnifying-glass {
+            font-size: 1.25em;
+        }
+    }
+
+    #my-Account button:nth-child(2) {
+        display: none;
+    }
+}

@@ -1,0 +1,81 @@
+a {
+    text-decoration: none;
+}
+
+#suggestion-card {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#suggestion-card>img {
+    margin-right: 8px;
+    height: 94px;
+    width: 168px;
+    aspect-ratio: 16/9;
+
+    border-radius: 8px;
+}
+
+#card-data #card-title {
+    color: #000;
+    font-size: 0.85em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#card-data #card-channel {
+    font-size: 0.8em;
+    color: #777;
+}
+
+#card-channel #card-analy {
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 520px) {
+
+    #suggestion-card {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    #suggestion-card>img {
+        margin-right: 0;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 16/9;
+
+        border-radius: 0;
+    }
+
+    #card-data {
+        padding: 0 12px;
+    }
+
+    #card-data #card-title {
+        color: #000;
+        font-size: 0.9em;
+        line-height: 1.2em;
+        font-weight: 500;
+        margin: 10px 0 5px;
+    }
+
+    #card-data #card-channel {
+        display: flex;
+        align-items: center;
+        font-size: 0.8em;
+    }
+    
+    #card-data #card-analy::before {
+        content: ' • ';
+        font-size: 0.95em;
+        margin-left: 0.3em;
+    }
+
+    #card-data #card-analy {
+        font-size: 0.95em;
+    }
+}

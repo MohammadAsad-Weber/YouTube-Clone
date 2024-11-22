@@ -1,0 +1,30 @@
+#feed {
+    max-width: calc(100% - 240px);
+    width: 100%;
+
+    padding: 24px 10px 0;
+    margin-top: 60px;
+    margin-left: 240px;
+
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    #feed {
+        grid-template-columns: repeat(2, calc(100% / 2));
+    }
+}
+
+@media (max-width: 665px) {
+    #feed {
+        grid-template-columns: repeat(1, calc(100% / 1));
+    }
+}
+
+@media (max-width: 450px) {
+    #feed {
+        padding: 24px 0 0;
+    }
+}

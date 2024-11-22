@@ -1,0 +1,281 @@
+#VideoPage {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 60px;
+}
+
+/* VIDEOAREA CSS Starts from here */
+#primary {
+    max-width: calc((100vh - 48px - 136px)*(16 / 9));
+    width: calc(100% * 2/3);
+
+    margin: 24px 24px 0;
+}
+
+/* Video meta-data CSS Starts from here */
+#primary>iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 15px;
+}
+
+#primary #title {
+    font-weight: 600;
+    margin: 10px 5px;
+}
+
+#primary #video-data,
+#video-data #left,
+#left #channel,
+#video-data #analytics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#left {
+    column-gap: 40px;
+}
+
+#left #channel {
+    column-gap: 10px;
+}
+
+#channel img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+#channel-info #channel-name {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+#channel-info #channel-subs {
+    color: #444;
+    font-size: 0.85em;
+}
+
+#left #subscribe {
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 16px;
+
+    background-color: #151515;
+    border: none;
+    border-radius: 30px;
+}
+
+#analytics {
+    column-gap: 10px;
+}
+
+#analytics button {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#analytics button .bx {
+    margin-right: 5px;
+    scale: 1.5;
+}
+
+#like-dislike {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#like-dislike button {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 14px;
+    border: none;
+}
+
+#like-dislike button:first-child {
+    border-radius: 25px 0 0 25px;
+    border-right: 1px solid #999999;
+}
+
+#like-dislike button:last-child {
+    border-radius: 0 25px 25px 0;
+}
+
+#analytics .analy-btn {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 25px;
+}
+
+/* Description box CSS Starts from here */
+#primary #description-outer {
+    width: 100%;
+
+    margin: 12px 0;
+    padding: 12px;
+
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+#description-outer #views-date {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#description-outer #description {
+    height: 100px;
+
+    font-size: 0.85em;
+    font-weight: 400;
+    white-space: pre-wrap;
+    overflow: visible;
+    contain: content;
+}
+
+/* Comment section CSS Starts from here */
+#comment-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Suggestion-list CSS Starts from here */
+#suggestion-list {
+    width: 405px;
+    min-width: 300px;
+    padding-top: 24px;
+    padding-right: 24px;
+}
+
+/* Spinner CSS Starts from here */
+.spinner-area {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    margin: 15px auto;
+    border: 5px solid rgb(205, 205, 205);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+/* MEDIA QUERIES */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1300px) {
+    #VideoPage {
+        flex-direction: column;
+    }
+
+    #primary {
+        max-width: none;
+        width: calc(100% - 50px);
+    }
+
+    #primary #description {
+        margin: 12px 0;
+    }
+
+    .comment-infinite-scroll {
+        display: none;
+    }
+
+    #suggestion-list {
+        width: 100%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #primary>iframe {
+        border-radius: 0;
+    }
+
+    #left {
+        column-gap: 25px;
+    }
+
+    #left #channel {
+        column-gap: 5px;
+    }
+
+    #channel img {
+        height: 40px;
+    }
+
+    #left #subscribe {
+        font-size: 0.85em;
+    }
+
+    #analytics {
+        column-gap: 5px;
+    }
+
+    #analytics button .bx {
+        scale: 1.15;
+    }
+
+    #like-dislike button,
+    #analytics .analy-btn {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 690px) {
+
+    #primary #title {
+        font-size: 1.075em;
+    }
+
+    #primary #video-data {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #video-data #left,
+    #video-data #analytics {
+        width: 100%;
+    }
+
+    #video-data #analytics {
+        overflow: auto;
+        scrollbar-width: none;
+        justify-content: space-evenly;
+    }
+
+    #left #subscribe,
+    #like-dislike button,
+    #analytics .analy-btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    #suggestion-list {
+        padding: 25px 0;
+    }
+}
