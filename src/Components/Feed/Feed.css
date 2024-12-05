@@ -21,9 +21,7 @@
     #feed {
         grid-template-columns: repeat(1, calc(100% / 1));
     }
-}
 
-@media (max-width: 450px) {
     #feed {
         padding: 24px 0 0;
     }

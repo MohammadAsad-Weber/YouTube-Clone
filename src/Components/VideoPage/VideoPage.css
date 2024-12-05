@@ -7,19 +7,19 @@
 
 /* VIDEOAREA CSS Starts from here */
 #primary {
-    max-width: calc((100vh - 48px - 136px)*(16 / 9));
+    max-width: calc((100vh - 136px)*(16 / 9));
     width: calc(100% * 2/3);
 
-    margin: 24px 24px 0;
+    padding: 24px 24px 0;
 }
 
-/* Video meta-data CSS Starts from here */
 #primary>iframe {
     aspect-ratio: 16/9;
     width: 100%;
     border-radius: 15px;
 }
 
+/* Video meta-data CSS Starts from here */
 #primary #title {
     font-weight: 600;
     margin: 10px 5px;
@@ -191,11 +191,7 @@
 
     #primary {
         max-width: none;
-        width: calc(100% - 50px);
-    }
-
-    #primary #description {
-        margin: 12px 0;
+        width: 100%;
     }
 
     .comment-infinite-scroll {
@@ -210,49 +206,24 @@
 
 @media (max-width: 768px) {
 
+    #primary {    
+        padding: 12px 0 0;
+    }
+
     #primary>iframe {
         border-radius: 0;
     }
 
-    #left {
-        column-gap: 25px;
-    }
-
-    #left #channel {
-        column-gap: 5px;
-    }
-
-    #channel img {
-        height: 40px;
-    }
-
-    #left #subscribe {
-        font-size: 0.85em;
-    }
-
-    #analytics {
-        column-gap: 5px;
-    }
-
-    #analytics button .bx {
-        scale: 1.15;
-    }
-
-    #like-dislike button,
-    #analytics .analy-btn {
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 690px) {
-
     #primary #title {
-        font-size: 1.075em;
+        padding: 0 16px;
+        margin: 10px 5px;
     }
+
 
     #primary #video-data {
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 15px;
+        padding: 0 16px;
     }
 
     #video-data #left,
@@ -263,7 +234,11 @@
     #video-data #analytics {
         overflow: auto;
         scrollbar-width: none;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+    }
+
+    #analytics button .bx {
+        scale: 1.15;
     }
 
     #left #subscribe,
@@ -271,11 +246,24 @@
     #analytics .analy-btn {
         padding: 10px 20px;
     }
-}
 
-@media (max-width: 520px) {
+    #primary #description-outer {
+        width: calc(100% - 32px);
+        margin: 12px 16px;
+    }
 
     #suggestion-list {
         padding: 25px 0;
+    }
+}
+
+@media (max-width: 690px) {
+
+    #primary #title {
+        font-size: 1.075em;
+    }
+
+    #video-data #analytics {
+        justify-content: space-evenly;
     }
 }
