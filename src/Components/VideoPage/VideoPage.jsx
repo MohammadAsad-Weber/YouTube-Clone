@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { YouTubeContext } from '../../Context/IndexContext'; // Context API
-import API_KEY from '../../../API_KEY'; // API Key
 import './VideoPage.css'; // StyleSheet
 
 // Components
@@ -9,6 +8,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import CommentCard from '../CommentCard/CommentCard';
 
 function VideoPage() {
+  // My API Key
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   // Using Context
   const { videoId, setProgress, setSideBarShow, formatNumber, timeSincePublish, NumberFormatter, formatDate } = useContext(YouTubeContext);

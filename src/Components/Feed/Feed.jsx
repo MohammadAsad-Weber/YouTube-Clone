@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component"; // Infinite-Scroller
 import { YouTubeContext } from "../../Context/IndexContext"; // Context API
-import API_KEY from "../../../API_KEY"; // My API Key
 import './Feed.css'; // StyleSheet
 
 // Components
@@ -9,6 +8,9 @@ import Cards from '../Cards/Cards';
 import Loader from "../Loader/Loader";
 
 function Feed(props) {
+    // My API Key
+    const API_KEY = import.meta.env.VITE_API_KEY;
+
     // Using Context
     const { setProgress, sideBarShow } = useContext(YouTubeContext);
 
